@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(name='kao_hex',
       version='0.0.1',
       description="",
-      author='',
-      author_email='',
+      author='Chris Loew',
+      author_email='cloew123@gmail.com',
       packages=['kao_hex'],
      )
