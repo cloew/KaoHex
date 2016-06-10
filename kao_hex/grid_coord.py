@@ -17,6 +17,10 @@ class GridCoord:
         """ Return the neighboring coordinates """
         return [GridCoord(x=self.x+1, y=self.y), GridCoord(x=self.x, y=self.y+1), GridCoord(x=self.x-1, y=self.y+1),
                 GridCoord(x=self.x-1, y=self.y), GridCoord(x=self.x, y=self.y-1), GridCoord(x=self.x+1, y=self.y-1)]
+                
+    def distanceTo(self, other):
+        """ Return the distance between two coordinates """
+        return (abs(self.x-other.x) + abs(self.y-other.y) + abs(self.z-other.z))/2
         
     def __repr__(self):
         """ Return the String representation of the Grid Coord """
