@@ -17,6 +17,14 @@ class GridCoord:
         """ Return the neighboring coordinates """
         return [GridCoord(x=self.x+1, y=self.y), GridCoord(x=self.x, y=self.y+1), GridCoord(x=self.x-1, y=self.y+1),
                 GridCoord(x=self.x-1, y=self.y), GridCoord(x=self.x, y=self.y-1), GridCoord(x=self.x+1, y=self.y-1)]
+        
+    def coordsInRange(self, n):
+        """ Return the coordinates in the given range """
+        results = set()
+        for dx in range(-n, n+1):
+            for dy in range(max(-n, -n-dx), min(n, n-dx)+1):
+                results.add(GridCoord(self.x+dx, self.y+dy))
+        return results
                 
     def distanceTo(self, other):
         """ Return the distance between two coordinates """
