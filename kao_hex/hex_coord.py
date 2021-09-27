@@ -1,6 +1,6 @@
 
-class GridCoord:
-    """ Represents a Coordinate in a grid """
+class HexCoord:
+    """ Represents a Coordinate in a hex grid """
     
     def __init__(self, x=0, y=0):
         """ Initialize with the x and y coordinate """

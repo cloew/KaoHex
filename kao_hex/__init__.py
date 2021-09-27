@@ -1,1 +1,1 @@
-from .grid_coord import GridCoord
+from .hex_coord import HexCoord
