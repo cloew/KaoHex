@@ -12,12 +12,12 @@ def main(args):
     circle3 = HexCircle(coord, 3)
     print(circle2.coords)
     
-    printer = HexGridPrinter(rows=10, cols=10, cell_length=2, long_row_first=False)
+    printer = HexGridPrinter(rows=10, cols=10, cell_length=3, topright=HexCoord(-4, 9), long_row_first=False)
     contents = {}
     
-    for x in range(printer.cols*2):
-        for y in range(printer.rows):
-            contents[HexCoord(x, y)] = "{}{}".format(chr(ord("A") + x), y)
+    for x in range(-printer.cols*2, printer.cols*2):
+        for y in range(-printer.rows, printer.rows):
+            contents[HexCoord(x, y)] = "{}{}".format(("-" if x < 0 else "") + chr(ord("A") + abs(x)), y)
     
     for hex in circle3.coords:
       contents[hex] = "+2"
