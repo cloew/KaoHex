@@ -1,6 +1,6 @@
 import sys
 
-from kao_hex import HexCircle, HexCoord, HexVector, find_neighbors, ring_around
+from kao_hex import HexCircle, HexCoord, HexVector, find_neighbors, ring_around, range_around
 from kao_hex.hex_grid_printer import HexGridPrinter
 
 
@@ -42,6 +42,9 @@ def main(args):
     print(ring_around(center, 0))
     print(ring_around(center, 1))
     print(ring_around(center, 2))
+    
+    rangeCells = range_around(center, 2)
+    print(rangeCells, len(rangeCells))
 
     # coord = HexCoord(3, 3)
     # circle = HexCircle(coord, 1)
