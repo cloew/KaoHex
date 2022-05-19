@@ -1,9 +1,9 @@
-from .hex_coord import HexCoord
+from .hex_vector import HexVector
 
 class HexGridPrinter:
     """ Helper class to print a hex grid to the console """
     
-    def __init__(self, *, rows, cols, cell_length=3, empty=" ", topright=HexCoord(0,0), long_row_first=True):
+    def __init__(self, *, rows, cols, cell_length=3, empty=" ", topright=HexVector(0,0), long_row_first=True):
         """ Initialize the HexGridPrinter with the grid size (in rows/cols) and the size of each cell and what to print if the cell is empty """
         self.rows = rows
         self.cols = cols
@@ -33,9 +33,7 @@ class HexGridPrinter:
         else:
             startX = dy//2
         for dx in range(startX, startX + cols_in_row + 1):
-            coord = HexCoord(x=self.topright.x+dx, y=self.topright.y-dy)
-            # if y==2:
-                # print(coord)
+            coord = HexVector(x=self.topright.x+dx, y=self.topright.y-dy)
             content = self.get_coord_content(coord, coord_to_content)
             row_contents.append(content)
         return row_contents
