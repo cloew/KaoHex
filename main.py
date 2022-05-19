@@ -5,7 +5,7 @@ from kao_hex.hex_grid_printer import HexGridPrinter
 
 
 def main(args):
-    coord = HexCoord(0, 0)
+    coord = HexCoord(3, 3)
     circle = HexCircle(coord, 1)
     print(circle.coords)
     circle2 = HexCircle(coord, 2)
