@@ -18,6 +18,8 @@ def main(args):
     
     print(find_neighbors(center))
     
+    distantPoint = HexVector(x=2, y=10)
+    print(distantPoint.magnitude)
 
     # coord = HexCoord(3, 3)
     # circle = HexCircle(coord, 1)

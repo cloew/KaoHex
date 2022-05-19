@@ -15,6 +15,11 @@ class HexVector:
         """ Return the z coordinate """
         return _compute_third(self.x, self.y)
         
+    @property
+    def magnitude(self):
+        """ Return the magnitude of the vector """
+        return (abs(self.x) + abs(self.y) + abs(self.z))//2
+        
     def __add__(self, other):
         """ Add this Hex Vector to another Vector """
         return HexVector(self.x+other.x, self.y+other.y)
