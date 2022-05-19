@@ -38,6 +38,18 @@ class HexVector:
         return HexVector(self.x/scalar, self.y/scalar)
     __rtruediv__ = __truediv__
         
+    def __eq__(self, other):
+        """ Return whether self and other are equal """
+        return (self.x, self.y) == (other.x, other.y)
+        
+    def __ne__(self, other):
+        """ Return whether self and other are not equal """
+        return not self == other
+        
+    def __hash__(self):
+        """ Return the hash code for the Coordinate """
+        return hash((self.x, self.y))
+        
     def __repr__(self):
         """ Return the String representation of the Grid Coord """
         return "<HexVector(x={}, y={}, z={})>".format(self.x, self.y, self.z)

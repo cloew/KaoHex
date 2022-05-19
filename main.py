@@ -34,6 +34,10 @@ def main(args):
     print(5*coord)
     print(coord/5)
     print(5/coord)
+    
+    print(HexVector(x=1,y=-1) == HexVector(x=1,y=-1))
+    print(HexVector(x=1,y=-1) != HexVector(x=1,y=-1))
+    print(hash(HexVector(x=1,y=-1)), hash(HexVector(x=1,y=-1)))
 
     # coord = HexCoord(3, 3)
     # circle = HexCircle(coord, 1)
