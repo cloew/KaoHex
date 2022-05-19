@@ -24,6 +24,10 @@ class HexVector:
         """ Add this Hex Vector to another Vector """
         return HexVector(self.x+other.x, self.y+other.y)
         
+    def __sub__(self, other):
+        """ Add this Hex Vector to another Vector """
+        return HexVector(self.x-other.x, self.y-other.y)
+        
     def __repr__(self):
         """ Return the String representation of the Grid Coord """
         return "<HexVector(x={}, y={}, z={})>".format(self.x, self.y, self.z)

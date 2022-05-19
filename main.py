@@ -19,7 +19,15 @@ def main(args):
     print(find_neighbors(center))
     
     distantPoint = HexVector(x=2, y=10)
+    otherPoint = HexVector(x=1, y=10)
     print(distantPoint.magnitude)
+    print(distantPoint - otherPoint)
+    print(otherPoint - distantPoint)
+    
+    l = HexVector(x=-1, z=1)
+    tr = HexVector(y=1, z=-1)
+    print(tr-l)
+    print((tr-l).magnitude)
 
     # coord = HexCoord(3, 3)
     # circle = HexCircle(coord, 1)
