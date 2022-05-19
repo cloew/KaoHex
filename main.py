@@ -1,6 +1,6 @@
 import sys
 
-from kao_hex import HexCircle, HexCoord, HexVector, find_neighbors
+from kao_hex import HexCircle, HexCoord, HexVector, find_neighbors, ring_around
 from kao_hex.hex_grid_printer import HexGridPrinter
 
 
@@ -38,6 +38,10 @@ def main(args):
     print(HexVector(x=1,y=-1) == HexVector(x=1,y=-1))
     print(HexVector(x=1,y=-1) != HexVector(x=1,y=-1))
     print(hash(HexVector(x=1,y=-1)), hash(HexVector(x=1,y=-1)))
+    
+    print(ring_around(center, 0))
+    print(ring_around(center, 1))
+    print(ring_around(center, 2))
 
     # coord = HexCoord(3, 3)
     # circle = HexCircle(coord, 1)
