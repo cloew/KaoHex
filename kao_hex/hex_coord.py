@@ -15,8 +15,8 @@ class HexCoord:
     @property
     def neighbors(self):
         """ Return the neighboring coordinates """
-        return [HexCoord(x=self.x+1, y=self.y), HexCoord(x=self.x, y=self.y+1), HexCoord(x=self.x-1, y=self.y-1),
-                HexCoord(x=self.x-1, y=self.y), HexCoord(x=self.x, y=self.y-1), HexCoord(x=self.x+1, y=self.y+1)]
+        return [HexCoord(x=self.x+1, y=self.y), HexCoord(x=self.x, y=self.y+1), HexCoord(x=self.x-1, y=self.y+1),
+                HexCoord(x=self.x-1, y=self.y), HexCoord(x=self.x, y=self.y-1), HexCoord(x=self.x+1, y=self.y-1)]
         
     def coordsInRange(self, n):
         """ Return the coordinates in the given range """
