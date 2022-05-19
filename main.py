@@ -5,12 +5,17 @@ from kao_hex.hex_grid_printer import HexGridPrinter
 
 
 def main(args):
+    center = HexVector(0,0,0)
     coord = HexVector(x=1,y=-1)
     print(coord)
     coord = HexVector(x=1,z=-1)
     print(coord)
     coord = HexVector(y=1,z=-1)
     print(coord)
+    
+    print(center + HexVector(y=1, z=-1))
+    print(HexVector(x=1,y=-1) + HexVector(y=1, z=-1))
+    
 
     # coord = HexCoord(3, 3)
     # circle = HexCircle(coord, 1)
