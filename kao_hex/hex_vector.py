@@ -28,6 +28,16 @@ class HexVector:
         """ Add this Hex Vector to another Vector """
         return HexVector(self.x-other.x, self.y-other.y)
         
+    def __mul__(self, scalar):
+        """ Multiply this hex vector times a scalar """
+        return HexVector(self.x*scalar, self.y*scalar)
+    __rmul__ = __mul__
+        
+    def __truediv__(self, scalar):
+        """ Divide this hex vector by a scalar """
+        return HexVector(self.x/scalar, self.y/scalar)
+    __rtruediv__ = __truediv__
+        
     def __repr__(self):
         """ Return the String representation of the Grid Coord """
         return "<HexVector(x={}, y={}, z={})>".format(self.x, self.y, self.z)

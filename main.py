@@ -28,6 +28,12 @@ def main(args):
     tr = HexVector(y=1, z=-1)
     print(tr-l)
     print((tr-l).magnitude)
+    
+    coord = HexVector(x=1,y=-1)
+    print(coord*5)
+    print(5*coord)
+    print(coord/5)
+    print(5/coord)
 
     # coord = HexCoord(3, 3)
     # circle = HexCircle(coord, 1)
