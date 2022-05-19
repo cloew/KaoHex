@@ -45,13 +45,11 @@ def main(args):
     
     # rangeCells = range_around(center, 2)
     # print(rangeCells, len(rangeCells))
-
-    # coord = HexCoord(3, 3)
-    # circle = HexCircle(coord, 1)
-    # print(circle.coords)
-    # circle2 = HexCircle(coord, 2)
-    # circle3 = HexCircle(coord, 3)
-    # print(circle2.coords)
+    
+    coord = HexVector(3, 3)
+    circle = range_around(coord, 0)
+    circle1 = range_around(coord, 1)
+    circle2 = range_around(coord, 2)
     
     printer = HexGridPrinter(rows=10, cols=10, cell_length=3, topright=HexVector(-4, 9), long_row_first=False)
     contents = {}
@@ -60,14 +58,14 @@ def main(args):
         for y in range(-printer.rows, printer.rows):
             contents[HexVector(x, y)] = "{}{}".format(("-" if x < 0 else "") + chr(ord("A") + abs(x)), y)
     
-    # for hex in circle3.coords:
-      # contents[hex] = "+2"
+    for hex in circle2:
+      contents[hex] = "+2"
     
-    # for hex in circle2.coords:
-      # contents[hex] = "+1"
+    for hex in circle1:
+      contents[hex] = "+1"
     
-    # for hex in circle.coords:
-      # contents[hex] = "+0"
+    for hex in circle:
+      contents[hex] = "+0"
     printer.print_grid(contents)
     
 if __name__ == '__main__':
