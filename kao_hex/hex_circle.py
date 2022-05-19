@@ -18,8 +18,8 @@ class HexCircle:
         
     def fill_out_circle(self, current, coords_in_circle, depth=1):
         """ Add all the coords in the circle to the given set """
+        new_neighbors = set(current.neighbors) - coords_in_circle
         coords_in_circle.update(current.neighbors)
         if depth + 1 != self.num_bands:
-            for coord in current.neighbors:
-                if coord not in coords_in_circle:
-                    self.get_neighbors_in_circle(coord, fill_out_circle, depth+1)
+            for coord in new_neighbors:
+                self.fill_out_circle(coord, coords_in_circle, depth+1)
