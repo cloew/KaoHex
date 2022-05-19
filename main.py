@@ -1,6 +1,6 @@
 import sys
 
-from kao_hex import HexCircle, HexCoord, HexVector
+from kao_hex import HexCircle, HexCoord, HexVector, find_neighbors
 from kao_hex.hex_grid_printer import HexGridPrinter
 
 
@@ -15,6 +15,8 @@ def main(args):
     
     print(center + HexVector(y=1, z=-1))
     print(HexVector(x=1,y=-1) + HexVector(y=1, z=-1))
+    
+    print(find_neighbors(center))
     
 
     # coord = HexCoord(3, 3)
