@@ -38,6 +38,12 @@ class HexVector:
         return HexVector(self.x/scalar, self.y/scalar)
     __rtruediv__ = __truediv__
         
+    def __round__(self):
+        """ Return a rounded version of this HexVector """
+        result = HexVector(round(self.x), round(self.y))
+        print(self, result, (self.x, self.y), (round(self.x), round(self.y)))
+        return result
+        
     def __eq__(self, other):
         """ Return whether self and other are equal """
         return (self.x, self.y) == (other.x, other.y)
