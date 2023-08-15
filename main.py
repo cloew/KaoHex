@@ -1,6 +1,6 @@
 import sys
 
-from kao_hex import HexVector, find_neighbors, line_to, ring_around, range_around
+from kao_hex import HexVector, find_neighbors, line_to, ring_around, range_around, steps_to
 from kao_hex.hex_grid_printer import HexGridPrinter
 
 
@@ -26,6 +26,8 @@ def main(args):
     destination = HexVector(1,-2,0)*2
     path = line_to(destination, start=center)
     print(path)
+    
+    print(steps_to(destination, start=center))
     
     # coord = HexVector(x=1,y=-1)
     # print(coord)

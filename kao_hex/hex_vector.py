@@ -40,9 +40,7 @@ class HexVector:
         
     def __round__(self):
         """ Return a rounded version of this HexVector """
-        result = HexVector(round(self.x), round(self.y))
-        print(self, result, (self.x, self.y), (round(self.x), round(self.y)))
-        return result
+        return HexVector(round(self.x), round(self.y))
         
     def __eq__(self, other):
         """ Return whether self and other are equal """
